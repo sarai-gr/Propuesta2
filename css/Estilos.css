@@ -6,8 +6,8 @@ body {
 
 main {
   flex: 1 0 auto;
+  padding-top: 64px;
 }
-
 .containerPrincipal{
   padding-left: 25px;
 }
@@ -20,7 +20,6 @@ main {
 select[required]:focus{
   outline: none !important;
 }
-
 select[required]{
   display: block;
   padding: 0;
@@ -29,4 +28,10 @@ select[required]{
   color: transparent;
   border: none;
   top: 0;
+}
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
 }
