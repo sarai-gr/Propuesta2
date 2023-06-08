@@ -29,88 +29,125 @@
           </div>
         </nav>
       </div>
-  </header>
-  <main>
-    <div class="row">
-      <form class="col s12" action="#">
+    </header>
+
+    <main>
+      <div class="section container">
         <div class="row">
-          <div class="input-field col s6">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">First Name</label>
-          </div>
-          <div class="input-field col s6">
-            <i class="material-icons prefix">phone</i>
-            <input id="icon_telephone" type="tel" class="validate">
-            <label for="icon_telephone">Telephone</label>
-          </div>
-          <div class="input-field col s6">
-            <i class="material-icons prefix">location_on</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Direcci&oacute;n</label>
-          </div>
-          <div class="input-field col s6">
-            <i class="material-icons prefix">email</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Correo</label>
-          </div>
-          <div class="input-field col s6">
-            <i class="material-icons prefix">insert_comment</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Motivo de adquisici&oacute;n</label>
-          </div>
-          <div class="input-field col s12">
-            <select>
-              <option value="" disabled selected>Choose your option</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-            <label>Materialize Select</label>
-          </div>
-        </div>
-          <p>
-            <label>
-              <input type="checkbox" class="filled-in">
-              <span>Acepto los t&eacute;rminos y condiciones del sitio.</span>
-            </label>
-          </p>
+          <form class="col s12" method="POST" onsubmit="return Validar()">
+            <div class="row card-panel">
+              <h2 class="textoCentrado">Cont&aacute;ctenos</h2>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="nombre" type="text" class="validate" required>
+                <label for="nombre">Nombre Completo</label>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">phone</i>
+                <input id="telefono" type="tel" class="validate" required pattern="[0-9]{8}">
+                <span class="helper-text" data-error="Error" data-success="V&aacute;lido">N&uacute;meros sin gui&oacute;n</span>
+                <label for="telefono">Tel&eacute;fono</label>
+              </div>
+
+              <div class="input-field col s6" id="municipio">
+                <i class="material-icons prefix">location_city</i>
+                <select name="municipio" required="required">
+                  <option value="" disabled selected>Seleccione un Municipio</option>
+                  <option value="1">San Miguel</option>
+                  <option value="2">Chinameca</option>
+                  <option value="3">El Tr&aacute;nsito</option>
+                  <option value="4">Cuidad Barrios</option>
+                  <option value="4">Chirilagua</option>
+                  <option value="4">Sesori</option>
+                  <option value="4">San Rafael Oriente</option>
+                  <option value="4">Moncagua</option>
+                  <option value="4">Lolotique</option>
+                  <option value="4">San Jorge</option>
+                  <option value="4">Chapeltique</option>
+                  <option value="4">San Gerardo</option>
+                  <option value="4">Carolina</option>
+                  <option value="4">Quelepa</option>
+                  <option value="4">San Luis de la Reina</option>
+                  <option value="4">Nuevo Ed&eacute;n de San Juan</option>
+                  <option value="4">Nueva Guadalupe</option>
+                  <option value="4">Uluazapa</option>
+                  <option value="4">Comacar&aacute;n</option>
+                  <option value="4">San Antonio del Mosco</option>
+                </select>
+                <label>Municipio</label>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                <label for="email">Correo</label>
+                <span class="helper-text" data-error="Error" data-success="V&aacute;lido"></span>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">location_on</i>
+                <input id="direccion" type="text" class="validate" required>
+                <label for="direccion">Direcci&oacute;n</label>
+              </div>
+
+              <div class="input-field col s6">
+                <i class="material-icons prefix">insert_comment</i>
+                <input id="motivo" type="text" class="validate" required>
+                <label for="motivo">Motivo de adquisici&oacute;n</label>
+              </div>
+
+              <div class="contenidoPadding">
+                <div class="input-field col s12">
+                  <p>
+                    <label>
+                      <input type="checkbox" class="filled-in" required>
+                      <span>Acepto los t&eacute;rminos y condiciones del sitio.</span>
+                    </label>
+                  </p>
+                </div>
+  
+                <button class="btn" type="submit">Enviar</button>
+                <button class="btn" type="reset">Borrar Datos</button>
+
+              </div>
+              
+            </div>
           </form>
         </div>
-      </form>
-    </div>
-
-   
-
-  </main>
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          </ul>
-        </div>
       </div>
-    </div>
-    <div class="footer-copyright">
+      <br><br><br><br><br><br><br><br><br><br>
+    </main>
+
+    <footer class="page-footer">
       <div class="container">
-      © 2014 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
           $(document).ready(function(){
       $('select').formSelect();
-    });
-        
+      });
     </script>
   </body>
 </html>
