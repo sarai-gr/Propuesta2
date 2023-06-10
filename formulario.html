@@ -51,23 +51,24 @@
           <form class="col s12" method="POST" onsubmit="return Validar()">
             <div class="row card-panel">
               <h2 class="textoCentrado">Cont&aacute;ctenos</h2>
-
+              
               <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="nombre" type="text" class="validate" required>
+                <input id="nombre" type="text">
+                <span><div id="MensajeNombre" class="Error"></div></span>
                 <label for="nombre">Nombre</label>
               </div>
 
               <div class="input-field col s6">
                 <i class="material-icons prefix">phone</i>
-                <input id="telefono" type="tel" class="validate" required pattern="[0-9]{8}">
-                <span class="helper-text" data-error="Error" data-success="V&aacute;lido">N&uacute;meros sin gui&oacute;n</span>
+                <input id="telefono" type="tel" pattern="[0-9]{8}">
+                <span><div id="MensajeTelefono" class="Error"></div></span>
                 <label for="telefono">Tel&eacute;fono</label>
               </div>
 
-              <div class="input-field col s6" id="municipio">
+              <div class="input-field col s6">
                 <i class="material-icons prefix">location_city</i>
-                <select name="municipio" required="required">
+                <select id="municipio">
                   <option value="" disabled selected>Seleccione</option>
                   <option value="1">San Miguel</option>
                   <option value="2">Chinameca</option>
@@ -91,34 +92,42 @@
                   <option value="4">San Antonio del Mosco</option>
                 </select>
                 <label>Municipio</label>
+                <span><div id="MensajeMunicipio" class="Error"></div></span>
               </div>
 
               <div class="input-field col s6">
                 <i class="material-icons prefix">email</i>
-                <input id="email" type="email" class="validate" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
-                <label for="email">Correo</label>
-                <span class="helper-text" data-error="Error" data-success="V&aacute;lido"></span>
+                <input id="email" type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" >
+                <label >Correo</label>
+                <span class="helper-text" data-error="Error" data-success="V&aacute;lido"><div id="MensajeCorreo" class="Error"></div></span>
               </div>
 
               <div class="input-field col s6">
                 <i class="material-icons prefix">location_on</i>
-                <input id="direccion" type="text" class="validate" required>
-                <label for="direccion">Direcci&oacute;n</label>
+                <input id="direccion" type="text" >
+                <span><div id="MensajeDireccion" class="Error"></div></span>
+                <label >Direcci&oacute;n</label>
               </div>
 
               <div class="input-field col s6">
                 <i class="material-icons prefix">insert_comment</i>
-                <input id="motivo" type="text" class="validate" required>
-                <label for="motivo">Motivo de adquisici&oacute;n</label>
+                <select id="motivo">
+                  <option value="" disabled selected>Seleccione</option>
+                  <option value="1">Personal(detalle)</option>
+                  <option value="2">Reventa(Mayoreo)</option>
+                </select>
+                <label>Motivo</label>
+                <span><div id="MensajeMotivo" class="Error"></div></span>
               </div>
 
               <div class="contenidoPadding">
                 <div class="input-field col s12">
                   <p>
                     <label>
-                      <input type="checkbox" class="filled-in" required>
+                      <input type="checkbox" class="filled-in" id="terminos">
                       <span>Acepto los t&eacute;rminos y condiciones del sitio.</span>
                     </label>
+                    <span><div id="MensajeTerminos" class="Error"></div></span>
                   </p>
                 </div>
   
@@ -158,6 +167,7 @@
     </footer>
 
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/Funciones.js"></script>
     <script>
           $(document).ready(function(){
       $('select').formSelect();

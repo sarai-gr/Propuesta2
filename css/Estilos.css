@@ -69,3 +69,7 @@ h4 {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+.Error{
+  color: gray;
+  padding-left: 3rem;
+}
