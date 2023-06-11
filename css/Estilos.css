@@ -86,3 +86,18 @@ footer.page-footer {
   color: gray;
   padding-left: 3rem;
 }
+.footerIconSize{
+  font-size: 3em;
+}
+.iconos{
+  color: #5d4037;
+}
+.brownNav{
+  background-color: #974949;
+}
+.celesteBtn{
+  background-color: #8BD5CB;
+}
+.rosaBtn{
+  background-color: #ff8a80;
+}
