@@ -5,25 +5,32 @@ function Validar()
 
     if(nombre.value!="")
     {
+        document.getElementById("MensajeNombre").innerHTML= "";
         telefono = document.getElementById("telefono");
         if(telefono.value!="")
         {
+            document.getElementById("MensajeTelefono").innerHTML= "";
             municipio = document.getElementById("municipio");
             if(municipio.value!="")
             {
+                document.getElementById("MensajeMunicipio").innerHTML= "";
                 correo = document.getElementById("email");
                 if(correo.value!="")
                 {
+                    document.getElementById("MensajeCorreo").innerHTML= "";
                     direccion = document.getElementById("direccion");
                     if(direccion.value!="")
                     {
+                        document.getElementById("MensajeDireccion").innerHTML= "";
                         motivo = document.getElementById("motivo");
                         if(motivo.value!="")
                         {
+                            document.getElementById("MensajeMotivo").innerHTML= "";
                             terminos = document.getElementById("terminos")
                             if(terminos.checked)
                             {
-                                alert("Todos los datos han sido guardados");
+                                document.getElementById("MensajeTerminos").innerHTML= "";
+                                alert("Todos los datos han sido guardados. ¡Gracias por tu preferencia!");
                                 return true;
                             }
                             else
@@ -74,4 +81,14 @@ function Validar()
         nombre.focus();
         return false;
     }
+}
+function resetForm() 
+{
+    document.getElementById("MensajeNombre").innerHTML= "";
+    document.getElementById("MensajeTelefono").innerHTML= "";
+    document.getElementById("MensajeMunicipio").innerHTML= "";
+    document.getElementById("MensajeCorreo").innerHTML= "";
+    document.getElementById("MensajeDireccion").innerHTML= "";
+    document.getElementById("MensajeMotivo").innerHTML= "";
+    document.getElementById("MensajeTerminos").innerHTML= "";
 }

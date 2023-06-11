@@ -57,14 +57,14 @@
               
               <div class="input-field col s6">
                 <i class="material-icons prefix iconos">account_circle</i>
-                <input id="nombre" type="text">
+                <input id="nombre" type="text" class="validate">
                 <span><div id="MensajeNombre" class="Error"></div></span>
                 <label for="nombre">Nombre</label>
               </div>
 
               <div class="input-field col s6">
                 <i class="material-icons prefix iconos">phone</i>
-                <input id="telefono" type="tel" pattern="[0-9]{8}">
+                <input id="telefono" type="tel" pattern="[0-9]{8}" class="validate">
                 <span><div id="MensajeTelefono" class="Error"></div></span>
                 <label for="telefono">Tel&eacute;fono</label>
               </div>
@@ -102,7 +102,7 @@
 
               <div class="input-field col s6">
                 <i class="material-icons prefix iconos">email</i>
-                <input id="email" type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" >
+                <input id="email" type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" class="validate">
                 <label >Correo</label>
                 <span class="helper-text" data-error="Error" data-success="V&aacute;lido"><div id="MensajeCorreo" class="Error"></div></span>
               </div>
@@ -111,7 +111,7 @@
 
               <div class="input-field col s6">
                 <i class="material-icons prefix iconos">location_on</i>
-                <input id="direccion" type="text" >
+                <input id="direccion" type="text" class="validate">
                 <span><div id="MensajeDireccion" class="Error"></div></span>
                 <label >Direcci&oacute;n</label>
               </div>
@@ -139,7 +139,7 @@
                 </div>
   
                 <button class="btn teal lighten-3" type="submit">Enviar</button>
-                <button class="btn teal lighten-3" type="reset">Borrar Datos</button>
+                <button class="btn teal lighten-3" type="reset" onclick="resetForm()">Borrar Datos</button>
 
               </div>
               
