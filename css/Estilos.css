@@ -1,9 +1,8 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
-
 main {
   flex: 1 0 auto;
   padding-top: 90px;
@@ -43,6 +42,9 @@ a:visited{
 }
 footer.page-footer {
   padding-top: 30px; /* Ajusta el valor del padding según tus necesidades */
+}
+.carousel{
+  height: 550px !important;
 }
 .containerPrincipal{
   padding-left: 25px;
@@ -101,4 +103,7 @@ footer.page-footer {
 }
 .rosaBtn{
   background-color: #ff8a80;
+}
+.containerCarousel{
+  margin: 0;
 }

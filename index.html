@@ -50,9 +50,45 @@
     </header>
   
     <main>
-      <div class="containerPrincipal">
-        <h2 class="textoCentrado">¡Bienvenidos a Panader&iacute;a El Gorgojito Feliz!</h2>
 
+      <div>
+        <h2 class="textoCentrado">¡Bienvenidos a Panader&iacute;a El Gorgojito Feliz!</h2>
+      </div>
+
+      <div class="containerCarousel">
+        <div class="row">
+          <div class="col s12">
+            <div class="carousel carousel-slider">
+              <a class="carousel-item">
+                <img src="images/carousel/img1.jpeg" alt="Panader&iacute;a El Gorgojito Feliz">
+              </a>
+              <a class="carousel-item">
+                <img src="images/carousel/img2.jpeg" alt="Panader&iacute;a El Gorgojito Feliz">
+              </a>
+              <a class="carousel-item">
+                <img src="images/carousel/img3.webp" alt="Panader&iacute;a El Gorgojito Feliz">
+              </a>
+              <a class="carousel-item">
+                <img src="images/carousel/img4.webp" alt="Panader&iacute;a El Gorgojito Feliz">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h3 class="textoCentrado">Permítenos llevarte en un viaje lleno de pasión por el pan y delicias irresistibles.</h3>
+        <p class="textoNormal">
+          <br>
+          El fundador Zelencio Masa descubri&oacute; su amor por la panader&iacute;a desde temprana edad.
+          Inspirado por los aromas celestiales y los sabores inigualables que emanaban de la panader&iacute;a del pueblo, decidi&oacute; llevar esa experiencia &uacute;nica a un nivel superior. As&iacute; naci&oacute; "El Gorgojito Feliz".
+          <br><br>En "El Gorgojito Feliz", fusionamos la tradici&oacute;n con la innovaci&oacute;n. Utilizamos ingredientes frescos, locales e internacionales para crear aut&eacute;nticas obras maestras de la panader&iacute;a.
+          Cada pan, postre y delicia est&aacute; hecho con el amor y la dedicaci&oacute;n de nuestro equipo de apasionados panaderos. El crujir dorado de una Tarta Francesa reci&eacute;n salida del horno o el sabor reconfortante de nuestros bollos reci&eacute;n horneados son solo una muestra de las delicias que te esperan.
+          <br><br>Pero somos mucho más que una panader&iacute;a. Es un lugar donde los corazones se llenan de calidez y amistad.
+          Te recibiremos con una sonrisa genuina y compartiremos historias y consejos culinarios mientras disfrutas de nuestras creaciones.
+          Te invitamos a que nos visites y te sumerjas en la magia de "El Gorgojito Feliz", donde los sueños se hornean y los sabores se fusionan para crear momentos inolvidables.
+          <br><br>¡Ven y &uacute;nete a nuestra familia panadera en "El Gorgojito Feliz"! Te prometemos una experiencia &uacute;nica que cautivar&aacute; tus sentidos y te dejar&aacute; con una sonrisa en el rostro.
+        </p>
       </div>
       
     </main>
@@ -87,14 +123,17 @@
         </div>
       </div>
     </footer>
-    
 
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
-          document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems);
-      }); 
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems,{
+      indicators: true
+    });
+    
+    var instances = M.Carousel.init(elems, options);
+    });
     </script>
   </body>
 </html>
